@@ -1,5 +1,6 @@
 package com.hitwe.frontend.automation.tests;
 
+import io.qameta.allure.Step;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import javax.imageio.ImageIO;
@@ -15,6 +16,7 @@ public class Given {
 
     public static String HITWE_LANDING_PAGE_URL = "https://m.hitwe.com/landing/inter?p=15276";
 
+    @Step
     public static void generateAndSaveLocallyRandomPhoto() {
         // Generate image
         int width = 640, height = 320;
@@ -46,6 +48,7 @@ public class Given {
     }
 
     // Delete generated image stored on computer
+    @Step
     public static void deleteGeneratedPhotoFromComputer() {
         String home = System.getProperty("user.home");
         File savedFile = new File(home + "/generated_photo.jpg");
@@ -53,6 +56,7 @@ public class Given {
     }
 
     // This method executes uploading file procedure via Linux system interactive window (I have laptop with Ubuntu OS)
+    @Step
     public static void uploadGeneratedPhotoFromComputer() throws AWTException {
         StringSelection ss = new StringSelection("generated_photo.jpg");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
