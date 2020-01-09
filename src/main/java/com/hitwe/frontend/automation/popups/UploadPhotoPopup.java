@@ -25,7 +25,7 @@ public class UploadPhotoPopup {
     }
 
     @Step
-    public UploadPhotoPopup clickLetsGoButtonButton() {
+    public UploadPhotoPopup clickLetsGoButton() {
         $(letsGoButtonLocator).click();
         return this;
     }

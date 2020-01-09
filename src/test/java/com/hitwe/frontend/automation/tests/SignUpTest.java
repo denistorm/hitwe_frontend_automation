@@ -1,6 +1,5 @@
 package com.hitwe.frontend.automation.tests;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.hitwe.frontend.automation.pages.LandingPage;
@@ -76,7 +75,7 @@ public class SignUpTest {
         Given.uploadGeneratedPhotoFromComputer();
         Popups.uploadPhotoPopup()
                 .assertPhotoUploadingFinished()
-                .clickLetsGoButtonButton();
+                .clickLetsGoButton();
         Selenide.refresh();
         Pages.userProfilePage()
                 .assertAvatarContainsUserPhoto();
