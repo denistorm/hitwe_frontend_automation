@@ -40,8 +40,6 @@ public class SignUpTest {
                 .clickContinueButton();
         Pages.mainPage()
                 .assertMainPageOpened();
-        Selenide.closeWebDriver();
-        Given.deleteGeneratedPhotoFromComputer();
     }
 
     @Test
