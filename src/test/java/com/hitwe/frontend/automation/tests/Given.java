@@ -58,8 +58,8 @@ public class Given {
     // This method executes uploading file procedure via Linux system interactive window (I have laptop with Ubuntu OS)
     @Step
     public static void uploadGeneratedPhotoFromComputer() throws AWTException {
-        StringSelection ss = new StringSelection("generated_photo.jpg");
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+        StringSelection savedFile = new StringSelection("generated_photo.jpg");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(savedFile, null);
         Robot robot = new Robot();
         robot.delay(3000);
         robot.keyPress(KeyEvent.VK_ALT);
